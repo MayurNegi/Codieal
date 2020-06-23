@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/layout.css" />
+    <%- style %>
+  </head>
+  <body>
+    <%- include('_header'); %>
+    <!-- body sums up the layout for the page -->
+    <%- body %> <%- include('_footer'); %> <%- script %>
+  </body>
+</html>
