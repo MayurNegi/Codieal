@@ -1,16 +1,31 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-  </head>
-  <body>
-    <%- include('_header'); %> -->
+<h1>
+  Codeial / <%= title %>
+</h1>
 
-<!-- rest part is taken care by layouts -->
-<h1>Codeial / Profile Page</h1>
+<section id="feed-posts">
+  <h4>Posts</h4>
+  <form action="/posts/create" id="new-post-form" method="POST">
+    <textarea
+      name="content"
+      cols="30"
+      rows="3"
+      placeholder="Type Here..."
+    ></textarea>
+    <input type="submit" value="Post" />
+  </form>
 
-<!-- <%- include('_footer'); %>
-  </body>
-</html> -->
+  <div id="post-list-container">
+    <ul>
+      <% for(post of posts){%>
+      <p>
+        <li>
+          <%= post.content %>
+          <small>
+            <%= post.user.name %>
+          </small>
+        </li>
+      </p>
+      <%} %>
+    </ul>
+  </div>
+</section>
