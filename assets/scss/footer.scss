@@ -1,0 +1,17 @@
+footer {
+  min-width: 70px;
+  background-color: grey;
+  display: flex;
+  div {
+    margin: 5px 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    div {
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
