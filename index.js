@@ -67,7 +67,7 @@ app.use(passport.session());
 
 app.use(passport.setAuthenticatedUser); //called as a middleware
 
-// to be use below session beacue flash uses session cookie
+// to be use below session beacause flash uses session cookie
 app.use(flash());
 app.use(customMware.setFlash);
 

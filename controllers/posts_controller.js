@@ -36,6 +36,15 @@ module.exports.destroy = async function (req, res) {
 
       req.flash("success", "post and associated comments deleted");
 
+      if (req.xhr) {
+        return res.status(200).json({
+          data: {
+            post_id: req.params.id,
+          },
+          message: "Post deleted",
+        });
+      }
+
       return res.redirect("back");
     } else {
       req.flash("error", "You cannot delete this post!");
