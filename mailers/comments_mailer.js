@@ -1,5 +1,5 @@
 const nodeMailer = require("../config/nodemailer");
-const { getMaxListeners } = require("../models/user");
+const User = require("../models/user");
 
 // this is another way of exporting method
 exports.newComment = (comment) => {
@@ -23,7 +23,7 @@ exports.newComment = (comment) => {
         return;
       }
 
-      console.log("Message sent/Delivered", info);
+      // console.log("Message sent/Delivered", info);
       return;
     }
   );
