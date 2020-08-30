@@ -34,17 +34,19 @@ module.exports.create = async function (req, res) {
 module.exports.destroy = async function (req, res) {
   try {
     let post = await Post.findById(req.params.id);
+    console.log("params", req.params.id);
 
     if (post.user == req.user.id) {
       // Chnage :: delete associated likes for posts and all of its comments
       await Like.deleteMany({ likeable: post, onModel: "Post" });
-      await like.deleteMany({ _id: { $in: post.comments } });
+      await Like.deleteMany({ _id: { $in: post.comments } });
 
       post.remove();
 
       await Comment.deleteMany({ post: req.params.id });
 
       if (req.xhr) {
+        console.log("params", req.params.id);
         return res.status(200).json({
           data: {
             post_id: req.params.id,

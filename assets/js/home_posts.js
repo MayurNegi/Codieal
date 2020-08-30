@@ -89,6 +89,7 @@
         type: "get",
         url: $(deleteLink).prop("href"),
         success: function (data) {
+          // console.log("hi", data);
           $(`#post-${data.data.post_id}`).remove();
           new Noty({
             theme: "relax",
