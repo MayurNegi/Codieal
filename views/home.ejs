@@ -59,6 +59,6 @@
 <script src="/js/chat_engine.js"></script>
 <% if(locals.user) { %>
 <script>
-  new ChatEngine("user-chat-box", "<%= locals.user._id %>"); // intializing class
+  new ChatEngine("user-chat-box", "<%= locals.user.email %>"); // intializing class
 </script>
 <% } %>
