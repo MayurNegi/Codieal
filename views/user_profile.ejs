@@ -31,4 +31,14 @@
 <!-- else show only the profile info -->
 <p><%= profile_user.name %></p>
 <p><%= profile_user.email %></p>
+
+<input
+  id="friends-handler"
+  type="submit"
+  href="/friends/toggle/<%= profile_user.id %>"
+  value="ADD"
+/>
+
 <%} %>
+
+<script src="/js/toggle_friends.js"></script>

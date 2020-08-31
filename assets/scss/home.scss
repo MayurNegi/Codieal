@@ -5,10 +5,19 @@
     padding: 10px;
   }
 
-  #user-friends {
+  #side {
     width: 30%;
     padding: 10px;
     border-left: 1px solid grey;
     height: 100%;
+    #user-friends {
+      min-height: 100px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid grey;
+      margin-left: 10px;
+    }
+    #all-users {
+      margin-left: 10px;
+    }
   }
 }
