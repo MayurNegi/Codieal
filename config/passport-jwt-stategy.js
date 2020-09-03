@@ -1,7 +1,7 @@
 const passport = require("passport");
 const JWTstrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
-const env = require("./environment");
+const env = require("./environment.js");
 
 const User = require("../models/user");
 
